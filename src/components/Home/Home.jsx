@@ -6,9 +6,9 @@ import Cart from "../Cart/Cart";
 const Home = () => {
   const [courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
-  const [remainingTime, setRemainingTime] = useState(0);
   const [totalCredit, setTotalCredit] = useState(0);
   const [remainingCredit, setRemainingCredit] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     fetch("data.json")
@@ -18,6 +18,7 @@ const Home = () => {
 
   const handleCourses = (course) => {
     let totalHours = course.credit;
+    let totalValue = course.price;
 
     const isPresent = selectedCourses.find(
       (item) => item.title === course.title
@@ -25,11 +26,19 @@ const Home = () => {
     if (isPresent) {
       return alert("Error");
     } else {
-      selectedCourses.forEach((time) => {
-        totalHours = totalHours + time.credit;
+      selectedCourses.forEach((item) => {
+        totalHours = totalHours + item.credit;
+        totalValue = totalValue + item.price;
       });
       setTotalCredit(totalHours);
+      setTotalPrice(totalValue);
       setSelectedCourses([...selectedCourses, course]);
+    }
+    const remainingCreditHours = 20 - totalHours;
+    if (remainingCreditHours < 0) {
+      return alert("Empty");
+    } else {
+      setRemainingCredit(remainingCreditHours);
     }
   };
   return (
@@ -53,7 +62,7 @@ const Home = () => {
                     <p>
                       <FiDollarSign />
                     </p>
-                    <p className="pl-4">Price: {course.Price}</p>
+                    <p className="pl-4">Price: {course.price}</p>
                   </div>
                   <div className="flex items-center">
                     <p>
@@ -82,6 +91,8 @@ const Home = () => {
         <Cart
           selectedCourses={selectedCourses}
           totalCredit={totalCredit}
+          remainingCredit={remainingCredit}
+          totalPrice={totalPrice}
         ></Cart>
       </div>
     </div>

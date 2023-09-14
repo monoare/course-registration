@@ -1,16 +1,22 @@
 import React from "react";
 
-const Cart = ({ selectedCourses, totalCredit }) => {
+const Cart = ({
+  selectedCourses,
+  totalCredit,
+  remainingCredit,
+  totalPrice,
+}) => {
   console.log(selectedCourses);
   return (
     <div className="w-full bg-base-100 shadow-xl rounded-xl">
-      <h1>Credit hours remaining:{selectedCourses.length} </h1>
+      <h1>Credit hours remaining:{remainingCredit} </h1>
       <hr />
       <h1>Courses Name:</h1>
       {selectedCourses.map((course, idx) => (
         <p key={idx}>{course.title}</p>
       ))}
       <h1>Credit:{totalCredit}</h1>
+      <h1>Total Price{totalPrice}</h1>
     </div>
   );
 };
