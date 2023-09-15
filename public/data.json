@@ -2,63 +2,63 @@
   {
     "img": "https://i.ibb.co/dGmvHMf/Rectangle-2-2.png",
     "title": "Introduction to C Programming",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "In this course, you will learn the principles of C programming and start coding hands-on in a browser tool that will provide instant feedback on your code.",
     "price": 15000,
     "credit": 1
   },
   {
     "img": "https://i.ibb.co/T103gQG/Rectangle-2-3.png",
     "title": "Introduction to Algorithms",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "This course is an introduction to mathematical modeling of computational problems, as well as common algorithms, algorithmic paradigms, and data structures used to solve these problems.",
     "price": 25000,
     "credit": 2
   },
   {
     "img": "https://i.ibb.co/LR0YFpn/Rectangle-2-4.png",
     "title": "Introduction to C++ for DSA",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "Build efficient programs by learning how to implement data structures using algorithmic techniques and solve various computational problems using the C++ programming language..",
     "price": 10000,
     "credit": 10
   },
   {
     "img": "https://i.ibb.co/ThLhcVt/Rectangle-3.png",
     "title": "Basic Data Structures",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "Our DSA tutorial will guide you to learn different types of data structures and algorithms and their implementations in Python, C, C++, and Java.",
     "price": 35000,
     "credit": 5
   },
   {
     "img": "https://i.ibb.co/d5Cg8HS/Rectangle-2.png",
     "title": "Introduction to OOP Python",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "This module will teach you how to model problems by using object-oriented programming (OOP) concepts. You'll also learn to turn your model into working code by using OOP concepts like classes, attributes, and methods.",
     "price": 19000,
     "credit": 5
   },
   {
     "img": "https://i.ibb.co/dmgy1XZ/Rectangle-2-5.png",
     "title": "Software Engineering",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "This course provides a general introduction to software engineering. It introduces concepts such as software processes and agile methods, and essential software development activities, from initial specification through to system maintenance.",
     "price": 23000,
     "credit": 2
   },
   {
     "img": "https://i.ibb.co/Ytw359c/Rectangle-3-1.png",
     "title": "AWS, Cloud Computing",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "The AWS Solutions Architect Certification training course will enable you to design, plan and scale AWS implementations utilizing over 70 cloud computing services. The AWS training is aligned with the latest AWS exam featuring Amazon designated best practices.",
     "price": 35000,
     "credit": 5
   },
   {
     "img": "https://i.ibb.co/RbHmCfV/Rectangle-2-1.png",
     "title": "Database (MySQL)",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "This course consists of a series of modules, each focused on a specific aspect of MySQL database management. Each module will include lectures, hands-on exercises, quizzes, and assignments to reinforce your learning.",
     "price": 19000,
     "credit": 5
   },
   {
     "img": "https://i.ibb.co/z25Zrp7/Rectangle-2-6.png",
     "title": "Problem-Solving Part",
-    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "details": "This course is divided into modules, each focusing on specific aspects of problem-solving. Each module will include lectures, case studies, group discussions, practical exercises, and real-world problem-solving scenarios to help you apply what you've learned.",
     "price": 23000,
     "credit": 2
   }

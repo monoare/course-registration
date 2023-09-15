@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FiDollarSign } from "react-icons/fi";
 import { TbBook } from "react-icons/tb";
 import Cart from "../Cart/Cart";
@@ -42,7 +42,7 @@ const Home = () => {
     }
   };
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid grid-cols-4 gap-6 pb-20">
       <div className="col-span-3">
         <div className="grid grid-cols-3 gap-6">
           {courses.map((course, idx) => (
@@ -56,19 +56,19 @@ const Home = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title mb-3">{course.title}</h2>
-                <p>{course.details}</p>
-                <div className="text-lg flex justify-between items-center mt-5">
+                <p className="text-justify">{course.details}</p>
+                <div className="text-lg flex justify-between items-center mt-5 gap-4">
                   <div className="flex items-center">
-                    <p>
+                    <p className="h-6 w-6">
                       <FiDollarSign />
                     </p>
-                    <p className="pl-4">Price: {course.price}</p>
+                    <p className="pl-2">Price: {course.price}</p>
                   </div>
                   <div className="flex items-center">
-                    <p>
+                    <p className="h-6 w-6">
                       <TbBook />
                     </p>
-                    <p className="pl-4">
+                    <p className="pl-2">
                       Credit: {course.credit}
                       {course.credit > 1 ? "hrs" : "hr"}
                     </p>

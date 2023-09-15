@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Cart = ({
   selectedCourses,
@@ -28,4 +28,10 @@ const Cart = ({
   );
 };
 
+Cart.propTypes = {
+  selectedCourses: PropTypes.array.isRequired,
+  totalCredit: PropTypes.number.isRequired,
+  remainingCredit: PropTypes.number.isRequired,
+  totalPrice: PropTypes.number.isRequired,
+};
 export default Cart;
