@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { FiDollarSign } from "react-icons/fi";
 import { TbBook } from "react-icons/tb";
 import Cart from "../Cart/Cart";
+import PropTypes from "prop-types";
+import Swal from "sweetalert2";
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
@@ -24,19 +26,30 @@ const Home = () => {
       (item) => item.title === course.title
     );
     if (isPresent) {
-      return alert("Error");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "You have chosen same course twice!",
+      });
     } else {
       selectedCourses.forEach((item) => {
         totalHours = totalHours + item.credit;
         totalValue = totalValue + item.price;
       });
-      setTotalCredit(totalHours);
-      setTotalPrice(totalValue);
-      setSelectedCourses([...selectedCourses, course]);
+
+      if (totalHours < 21) {
+        setTotalCredit(totalHours);
+        setTotalPrice(totalValue);
+        setSelectedCourses([...selectedCourses, course]);
+      }
     }
     const remainingCreditHours = 20 - totalHours;
     if (remainingCreditHours < 0) {
-      return alert("Empty");
+      Swal.fire({
+        icon: "warning",
+        title: "Sorry",
+        text: "Your total credit hour: 20 and You have no credit hour right now.",
+      });
     } else {
       setRemainingCredit(remainingCreditHours);
     }
@@ -97,6 +110,10 @@ const Home = () => {
       </div>
     </div>
   );
+};
+
+Home.propTypes = {
+  handleCourses: PropTypes.func.isRequired,
 };
 
 export default Home;
