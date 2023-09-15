@@ -55,33 +55,37 @@ const Home = () => {
     }
   };
   return (
-    <div className="grid grid-cols-4 gap-6 pb-20">
-      <div className="col-span-3">
-        <div className="grid grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-20 mx-4 md:mx-0">
+      <div className="col-span-1 md:col-span-2 lg:col-span-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course, idx) => (
             <div key={idx} className="card w-full bg-base-100 shadow-xl">
               <figure>
                 <img
-                  className="w-full m-4"
+                  className="w-full mx-8 my-2 md:m-4"
                   src={course.img}
                   alt="course image"
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title mb-3">{course.title}</h2>
+              <div className="card-body pt-2 md:pt-6">
+                <h2 className="text-center font-semibold lg:text-left md:mb-3 text-sm md:text-base lg:text-lg">
+                  {course.title}
+                </h2>
                 <p className="text-justify">{course.details}</p>
                 <div className="text-lg flex justify-between items-center mt-5 gap-4">
                   <div className="flex items-center">
-                    <p className="h-6 w-6">
+                    <p className="lg:h-6 lg:w-6">
                       <FiDollarSign />
                     </p>
-                    <p className="pl-2">Price: {course.price}</p>
+                    <p className="lg:pl-2 text-sm md:text-base lg:text-lg">
+                      Price: {course.price}
+                    </p>
                   </div>
                   <div className="flex items-center">
-                    <p className="h-6 w-6">
+                    <p className="lg:h-6 lg:w-6">
                       <TbBook />
                     </p>
-                    <p className="pl-2">
+                    <p className="lg:pl-2 text-sm md:text-base lg:text-lg">
                       Credit: {course.credit}
                       {course.credit > 1 ? "hrs" : "hr"}
                     </p>
@@ -90,7 +94,7 @@ const Home = () => {
                 <div className="card-actions justify-end mt-6">
                   <button
                     onClick={() => handleCourses(course)}
-                    className="btn btn-primary w-full text-lg font-semibold capitalize"
+                    className="btn btn-primary w-full text-sm md:text-base lg:text-lg font-semibold capitalize"
                   >
                     Select
                   </button>
