@@ -42,6 +42,7 @@ const Home = () => {
         setTotalCredit(totalHours);
         setTotalPrice(totalValue);
         setSelectedCourses([...selectedCourses, course]);
+        setRemainingCredit(remainingCreditHours);
       }
     }
     if (remainingCreditHours < 0) {
@@ -50,8 +51,6 @@ const Home = () => {
         title: "Sorry",
         text: "Your total credit hour: 20 and You have no credit hour right now.",
       });
-    } else {
-      setRemainingCredit(remainingCreditHours);
     }
   };
   return (
