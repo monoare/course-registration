@@ -74,7 +74,7 @@ const Home = () => {
                 <p className="text-justify">{course.details}</p>
                 <div className="text-lg flex justify-between items-center mt-5 gap-4">
                   <div className="flex items-center">
-                    <p className="lg:h-6 lg:w-6">
+                    <p>
                       <FiDollarSign />
                     </p>
                     <p className="lg:pl-2 text-sm md:text-base lg:text-lg">
@@ -82,7 +82,7 @@ const Home = () => {
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <p className="lg:h-6 lg:w-6">
+                    <p>
                       <TbBook />
                     </p>
                     <p className="lg:pl-2 text-sm md:text-base lg:text-lg">
