@@ -21,6 +21,7 @@ const Home = () => {
   const handleCourses = (course) => {
     let totalHours = course.credit;
     let totalValue = course.price;
+    let remainingCreditHours = 20;
 
     const isPresent = selectedCourses.find(
       (item) => item.title === course.title
@@ -36,14 +37,13 @@ const Home = () => {
         totalHours = totalHours + item.credit;
         totalValue = totalValue + item.price;
       });
-
+      remainingCreditHours = remainingCreditHours - totalHours;
       if (totalHours < 21) {
         setTotalCredit(totalHours);
         setTotalPrice(totalValue);
         setSelectedCourses([...selectedCourses, course]);
       }
     }
-    const remainingCreditHours = 20 - totalHours;
     if (remainingCreditHours < 0) {
       Swal.fire({
         icon: "warning",
@@ -117,7 +117,7 @@ const Home = () => {
 };
 
 Home.propTypes = {
-  handleCourses: PropTypes.func.isRequired,
+  handleCourses: PropTypes.func,
 };
 
 export default Home;
